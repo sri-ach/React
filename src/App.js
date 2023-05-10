@@ -3,6 +3,9 @@ import './App.css';
 import {Congratulations} from './components/Congratulations.js'
 import Gallery from './components/Gallery.js';
 import {Profile} from './components/Profile'
+import TodoList from './components/TodoList';
+import Bio from './components/Bio';
+import Avatar from './components/Avatar';
 
 
 export default function App() {
@@ -13,6 +16,9 @@ export default function App() {
         <Congratulations/>
         <Gallery/>
         <Profile/>
+        <TodoList/>
+        <Bio/>
+        <Avatar/>
       </header>
     </div>
   );
