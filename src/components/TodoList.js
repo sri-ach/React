@@ -1,5 +1,12 @@
+import { Person } from "../data/person";
+import Avatar from "./Avatar";
+
 export default function TodoList() {
-  const name = "Hedy Lamarr";
+
+  const heddy = new Person('Hedy Lamarr','yXOvdOS', 'm', {
+    backgroundColor: 'black',
+    color: 'pink'
+  } )
 
   const today = new Date();
 
@@ -8,14 +15,18 @@ export default function TodoList() {
   }
 
   return (
-    <>
-      <h1>{name}'s Todo list for {formatDate(today)}</h1>
-      <img src="https://i.imgur.com/yXOvdOSs.jpg" alt="Hedy Lamarr" className="photo" />
-      <ul>
+    <div style={heddy.theme}>    
+      <h1>
+        {heddy.name}'s Todo list for {formatDate(today)}
+      </h1>
+      <Avatar person={heddy}/>
+      <ul
+        style={heddy.theme}
+      >
         <li>Invent new traffic lights</li>
         <li>Rehearse a movie scene</li>
         <li>Improve the spectrum technology</li>
       </ul>
-    </>
+    </div>
   );
 }

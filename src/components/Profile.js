@@ -1,8 +1,15 @@
+import Avatar from "./Avatar"
+
+function Card({ children }) {
+  return (
+    <div className="card">
+      {children}
+    </div>
+  );
+}
+
 export function Profile() {
     return (
-      <img
-        src="https://i.imgur.com/MK3eW3Am.jpg"
-        alt="Katherine Johnson"
-      />
+      <Avatar />
     )
   }
