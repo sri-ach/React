@@ -12,9 +12,13 @@ export default function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <Congratulations />
+        <br></br>
         <Gallery />
-        <GalleryDetails/>
+        <br></br>
+        <GalleryDetails />
+        <br></br>
         <TodoList />
+        <br></br>
         <Bio />
       </header>
     </div>
