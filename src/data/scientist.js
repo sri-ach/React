@@ -15,19 +15,19 @@ export class Scientist {
   }
 
   get Profession() {
-    return this.profession ? this.profession : "";
+    return this.profession ?? "";
   }
 
   get Discovered() {
-    return this.discovered ? this.discovered : "";
+    return this.discovered ?? "";
   }
 
   get ImageSize() {
-    return this.imageSize ? this.imageSize : "";
+    return this.imageSize ?? "";
   }
 
   get Theme() {
-    return this.theme ? this.theme : null;
+    return this.theme ?? null;
   }
 
   get Awards() {
