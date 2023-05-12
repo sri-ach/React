@@ -1,20 +1,15 @@
-import Avatar from "./Avatar";
-import { Person } from "../data/person";
+import  * as scientists from "../data/scientist_list";
+import { Profile } from "./Profile";
 
-const katsuko = new Person('Katsuko Saruhashi', 'YfeOqp2')
-const heddy = new Person('Hedy Lamarr','yXOvdOS', 'm', {
-  backgroundColor: 'black',
-  color: 'pink'
-} )
 
 
 export default function Gallery() {
   return (
     <div>
-      <h1>Amazing scientists</h1>
-      <Avatar person={katsuko}/>
-      <Avatar person={heddy}/>
-     
+      <h1>Notable Scientists</h1>
+      <Profile person={scientists.madamCurie}/>
+      <Profile person={scientists.katsuko}/>
+      <Profile person={scientists.heddy}/>     
     </div>
   );
 }

@@ -1,15 +1,10 @@
 import Avatar from "./Avatar"
+import Card from "./Card"
 
-function Card({ children }) {
+export function Profile({ person }) {
   return (
-    <div className="card">
-      {children}
-    </div>
-  );
+    <Card>
+      <Avatar person={person} />
+    </Card>
+  )
 }
-
-export function Profile() {
-    return (
-      <Avatar />
-    )
-  }

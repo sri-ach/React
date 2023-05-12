@@ -4,6 +4,7 @@ import { Congratulations } from "./components/Congratulations.js";
 import Gallery from "./components/Gallery.js";
 import TodoList from "./components/TodoList";
 import Bio from "./components/Bio";
+import GalleryDetails from "./components/GalleryDetail";
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <Congratulations />
         <Gallery />
+        <GalleryDetails/>
         <TodoList />
         <Bio />
       </header>

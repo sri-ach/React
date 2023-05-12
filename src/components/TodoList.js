@@ -1,12 +1,10 @@
-import { Person } from "../data/person";
+import * as scientists from "../data/scientist_list";
+
 import Avatar from "./Avatar";
 
 export default function TodoList() {
 
-  const heddy = new Person('Hedy Lamarr','yXOvdOS', 'm', {
-    backgroundColor: 'black',
-    color: 'pink'
-  } )
+  const heddy = scientists.heddy
 
   const today = new Date();
 
