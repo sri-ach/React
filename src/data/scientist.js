@@ -31,17 +31,17 @@ export class Scientist {
   }
 
   get Awards() {
-    return this.hasAwards ? this.awards.length : "";
+    return this.#hasAwards ? this.awards.length : "";
   }
 
   get AwardsDetails() {
-    if (!this.hasAwards) {
+    if (!this.#hasAwards) {
       return "";
     }
     return "(" + this.awards.join(", ") + ")";
   }
 
-  get hasAwards() {
+  get #hasAwards() {
     if (this.awards == null) {
       return false;
     }    

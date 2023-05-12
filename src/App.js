@@ -1,7 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
-import { Congratulations } from "./components/Congratulations.js";
-import Gallery from "./components/Gallery.js";
+import { Congratulations } from "./components/Congratulations";
+import Gallery from "./components/Gallery";
 import TodoList from "./components/TodoList";
 import Bio from "./components/Bio";
 import GalleryDetails from "./components/GalleryDetail";
