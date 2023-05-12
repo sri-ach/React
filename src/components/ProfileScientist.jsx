@@ -16,7 +16,7 @@ export function ProfileScientist({ scientist, size = 70 }) {
           {scientist.Profession}
         </li>
         <li>
-          <b>Awards: {scientist.Awards} </b> 
+          <b>Awards: {scientist.Awards} </b> <br></br>
               {scientist.AwardsDetails}
         </li>
         <li>
