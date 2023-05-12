@@ -44,8 +44,7 @@ export class Scientist {
   get hasAwards() {
     if (this.awards == null) {
       return false;
-    }
-    console.log(Object.getPrototypeOf(this.awards))
+    }    
     if (this.awards instanceof Array) {
       return true;
     }
