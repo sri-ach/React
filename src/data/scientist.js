@@ -1,8 +1,7 @@
 const imageBaseUrl = "https://i.imgur.com/";
 
 export class Scientist {
-  #imageId
-  
+  #imageId;
 
   constructor(name, imageId) {
     this.name = name;
@@ -10,36 +9,50 @@ export class Scientist {
 
     this.profession = null;
     this.imageSize = null;
-    this.theme = null;    
-    this.awards = null
-    this.discovered = null
+    this.theme = null;
+    this.awards = null;
+    this.discovered = null;
   }
 
-  get Profession(){
-    return this.profession ? this.profession : ""
+  get Profession() {
+    return this.profession ? this.profession : "";
   }
 
   get Discovered() {
-    return this.discovered ? this.discovered : ""
+    return this.discovered ? this.discovered : "";
   }
 
-  get ImageSize(){
-    return this.imageSize ? this.imageSize : ""
+  get ImageSize() {
+    return this.imageSize ? this.imageSize : "";
   }
 
-  get Theme(){
-    return this.theme ? this.theme : null
+  get Theme() {
+    return this.theme ? this.theme : null;
   }
 
-  get Awards(){
-    return this.awards ? this.awards.length : ""
+  get Awards() {
+    return this.hasAwards ? this.awards.length : "";
   }
 
-  get AwardsDetails(){
-    return this.awards ? '(' + this.awards.join(', ') + ')' : ""
+  get AwardsDetails() {
+    if (!this.hasAwards) {
+      return "";
+    }
+    return "(" + this.awards.join(", ") + ")";
   }
 
-  get ImageUrl() {    
+  get hasAwards() {
+    if (this.awards == null) {
+      return false;
+    }
+    console.log(Object.getPrototypeOf(this.awards))
+    if (this.awards instanceof Array) {
+      return true;
+    }
+    return false;
+  }
+
+  get ImageUrl() {
     return imageBaseUrl + this.#imageId + this.ImageSize + ".jpg";
   }
 }
