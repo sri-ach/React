@@ -1,15 +1,10 @@
+import Avatar from "./Avatar"
 
-export function ProfileScientist({ scientist, size = 70 }) {
+export function ProfileScientist({ scientist }) {
   return (
     <section className="profile">
       <h2>{scientist.name}</h2>
-      <img
-        className="avatar"
-        src={scientist.ImageUrl}
-        alt={scientist.name}
-        width={size}
-        height={size}
-      />
+      <Avatar person={scientist} size = {200} />
       <ul>
         <li>
           <b>Profession: </b>
@@ -17,11 +12,11 @@ export function ProfileScientist({ scientist, size = 70 }) {
         </li>
         <li>
           <b>Awards: {scientist.Awards} </b> <br></br>
-              {scientist.AwardsDetails}
+          {scientist.AwardsDetails}
         </li>
         <li>
           <b>Discovered: {scientist.Discovered}</b>
-          
+
         </li>
       </ul>
     </section>
